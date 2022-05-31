@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #FFFfff;
 }
 
@@ -126,16 +128,14 @@ body::-webkit-scrollbar-thumb:active {
     cursor: default;
 }
 
-.avatar img {
+.avatar svg{
     width: 300px;
     height: 300px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 5px solid #18e77b;
 }
 
 .avatar h1 {
     padding: 10px 0;
+    font-weight: 900;
 }
 
 .container {
@@ -152,35 +152,37 @@ body::-webkit-scrollbar-thumb:active {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
-    align-items: center;
     justify-content: space-around;
-    background: #041119;
-    border: 1px solid #18e77b;
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
+    background: rgba(4, 17, 25, 0.9);
     border-radius: 6px;
     transition: all 400ms ease-out;
 }
 
 a:hover {
-    box-shadow: 5px 5px 20px #18e77b55;
     transform: translateY(-3%);
 }
 
 a .bubble {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    height: 120px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
 }
 
 a .bubble i {
-    font-size: 30px;
+    font-size: 40px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+}
+
+a h2{
+    font-weight: 700;
+}
+
+a h5{
+    margin-bottom: 5px;
+    font-weight: 200;
 }
 
 a .yt {
@@ -231,7 +233,7 @@ footer {
     .avatar {
         padding: 10px 0;
     }
-    .avatar img {
+    .avatar svg {
         width: 200px;
         height: 200px;
     }
@@ -241,9 +243,6 @@ footer {
     .container {
         padding: 0 20px;
         display: block;
-    }
-    .container a .bubble {
-        display: none;
     }
     .container a {
         padding: 15px;
