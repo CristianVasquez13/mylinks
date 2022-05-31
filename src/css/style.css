@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    color: #FFFfff;
+}
+
+body {
+    background: #041119;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #041119;
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: #041119;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #18e77b;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #18e77b55;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #18e77b;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+/*Animaciones*/
+
+.materialize {
+    opacity: 0;
+    animation-name: materialize;
+    animation-delay: 500ms;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes materialize {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+        letter-spacing: 4px;
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        letter-spacing: 0;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.first {
+    animation-delay: 250ms;
+}
+
+.second {
+    animation-delay: 500ms;
+}
+
+.third {
+    animation-delay: 750ms;
+}
+
+.fourth {
+    animation-delay: 1000ms;
+}
+
+.fifth {
+    animation-delay: 1250ms;
+}
+
+.sixth {
+    animation-delay: 1500ms;
+}
+
+/*styles*/
+
+.main-container {
+    position: relative;
+    z-index: 100;
+}
+
+.avatar {
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+    cursor: default;
+}
+
+.avatar img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #18e77b;
+}
+
+.avatar h1 {
+    padding: 10px 0;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.container a {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background: #041119;
+    border: 1px solid #18e77b;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: all 400ms ease-out;
+}
+
+a:hover {
+    box-shadow: 5px 5px 20px #18e77b55;
+    transform: translateY(-3%);
+}
+
+a .bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+a .bubble i {
+    font-size: 30px;
+}
+
+a .yt {
+    background-color: #ff0000;
+}
+
+a .fb {
+    background-color: #1977F3;
+}
+
+a .ig {
+    background: rgb(200, 55, 171);
+    background: linear-gradient(310deg, rgba(200, 55, 171, 1) 20%, rgba(255, 84, 62, 1) 50%, rgba(255, 221, 85, 1) 90%);
+}
+
+a .tw {
+    background-color: #1DA1F2;
+}
+
+a .gt{
+    background-color: #212529;
+}
+
+a .web {
+    background-color: #05377F;
+}
+
+a .pf {
+    background-color: #18e77b;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creator p {
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .avatar {
+        padding: 10px 0;
+    }
+    .avatar img {
+        width: 200px;
+        height: 200px;
+    }
+    .avatar h1 {
+        font-size: 24px;
+    }
+    .container {
+        padding: 0 20px;
+        display: block;
+    }
+    .container a .bubble {
+        display: none;
+    }
+    .container a {
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+    }
+}
